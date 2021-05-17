@@ -1,0 +1,22 @@
+spring:
+  profiles:
+    active: development
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/lunatech_imdb
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  logging:
+    pattern:
+      console: "%d %-5level %logger : %msg%n"
+    level:
+      org.springframework: info
+      org.hibernate: debug
+server:
+  port: 8089
